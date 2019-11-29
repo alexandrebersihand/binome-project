@@ -1,0 +1,49 @@
+#button-insertion{
+    margin: 10px;
+    width: 25%;
+    align-self: flex-end;
+}
+
+caption {
+    background-color: sienna;
+    border: solid sienna;
+    font-size: 25px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+tr {
+    border-bottom: solid sienna;
+}
+
+th.balise, th.language, td.balise, td.language {
+
+    text-align: center;
+    width: 200px;
+}
+
+table {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-collapse: collapse;
+    border: solid sienna;
+    background-color: beige;
+}
+
+#fix {
+    background-color: forestgreen;
+    position: fixed;
+    top: 80px;
+    left: 700px;
+}
+
+@media only screen
+  and (min-width: 320px)
+  and (max-width: 980px)
+  { html{display: flex;
+         align-items: flex-end; } 
+
+
+    caption {
+        width: auto;
+    }
+}

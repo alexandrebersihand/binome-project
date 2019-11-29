@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<body>
+<h1>Formulaire de contact</h1>
+    <div class="page-wrap">
+
+        <form method="post">
+            <div id="form">
+                <fieldset>
+                    <br>
+                    <div id="npe">
+                        <label for="Nom">Votre Nom :<br>
+                            <input type="text" id="Nom" name="Nom" placeholder="votre Nom" required>
+                        </label>
+                        <label for="prenom"> Votre Prénom :<br>
+                            <input type="text" id="prenom" name="Prénom" placeholder="votre Prénom" required>
+                        </label>
+                        <div class="genre">
+                            <input id="check" type="radio" value='genre' name='genre' autofocus>
+                            <p>Monsieur</p>
+                        </div>
+                        <br>
+                        <div class="genre">
+                            <input id="check" type="radio" value='genre' name='genre'>
+                            <p>Madame</p>
+                        </div>
+                        <label for="email">Email:<br>
+                            <input type="email" id="email" placeholder="Votre email" name="email" required>
+                        </label>
+
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <textarea name="Merci" id="Merci" cols="50" rows="10" placeholder="vos commentaires"></textarea>
+                </fieldset>
+                <input id="submit" type="submit" value="Envoyer le formulaire">
+            </div>
+        </form>
+    </div>
+</body>
+{% endblock %}

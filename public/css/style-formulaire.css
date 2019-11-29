@@ -1,0 +1,45 @@
+
+
+fieldset {
+    margin: 10px;
+}
+
+#form {
+    align-self: center;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    border-right: solid sienna 2px;
+    border-bottom: solid sienna 2px;
+    border-left: solid sienna 2px;
+    border-top: solid sienna 2px;
+    width : 500px;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+#check {
+    flex-direction: column;
+    border-radius: 15px;
+}
+#npe {
+    display: flex;
+    flex-direction: column;
+}
+
+#soumis {
+    background-color: #a58f6a;
+    font-family:arial, serif;
+    font-size:150%;
+    font-style: italic
+}
+
+#submit, #Merci {
+    border-radius: 5px;
+}
+.genre {
+    flex-direction: row;
+}

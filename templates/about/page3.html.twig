@@ -1,0 +1,159 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+        <div class="page-wrap">
+            <div class="sidebar">
+                <div class="side">
+                    <a href="#">^</a>
+                    <div class="sidedown-content">
+                        <div class="shtml">
+                            <a href="#debut-html">HTML</a>
+                                <div class="sidedown">
+                                    <a href="#balises">Balises</a>
+                                </div>
+                        </div>
+                        <div class="scss">
+                            <a href="#debut-css">CSS</a>
+                            <div class="sidedownn">
+                                <a href="#attribut">Attributs</a>
+                                <a href="#pseudo-classe">Pseudo-classe</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="debut-html">
+                <h1>HTML</h1>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut est efficitur, sollicitudin sapien in,
+                maximus arcu. Aliquam tristique arcu placerat metus iaculis bibendum. Nulla tellus nulla, semper nec dictum
+                tincidunt, mollis commodo mauris. Nullam ac congue tortor. Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Sed sed gravida mi, ac semper libero. Quisque id tincidunt nisl, sit amet ornare felis. Vivamus et purus
+                in lorem luctus consectetur ac vel felis. Etiam lacinia accumsan mattis. Sed neque metus, efficitur a nulla a,
+                venenatis porta velit. Nullam suscipit lobortis luctus. Donec consectetur ligula ac mi ornare maximus. Morbi
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut est efficitur, sollicitudin sapien in,
+                maximus arcu. Aliquam tristique arcu placerat metus iaculis bibendum. Nulla tellus nulla, semper nec
+                dictum tincidunt, mollis commodo mauris. Nullam ac congue tortor. Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Sed sed gravida mi, ac semper libero. Quisque id tincidunt nisl, sit amet
+                ornare felis. Vivamus et purus in lorem luctus consectetur ac vel felis. Etiam lacinia accumsan mattis.
+                Sed neque metus, efficitur a nulla a, venenatis porta velit. Nullam suscipit lobortis luctus. Donec
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut est efficitur, sollicitudin sapien in,
+                maximus arcu. Aliquam tristique arcu placerat metus iaculis bibendum. Nulla tellus nulla, semper nec
+                dictum tincidunt, mollis commodo mauris. Nullam ac congue tortor. Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Sed sed gravida mi, ac semper libero. Quisque id tincidunt nisl, sit amet
+                ornare felis. Vivamus et purus in lorem luctus consectetur ac vel felis. Etiam lacinia accumsan mattis.
+                Sed neque metus, efficitur a nulla a, venenatis porta velit. Nullam suscipit lobortis luctus. Donec
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut est efficitur, sollicitudin sapien in,
+                maximus arcu. Aliquam tristique arcu placerat metus iaculis bibendum. Nulla tellus nulla, semper nec
+                dictum tincidunt, mollis commodo mauris. Nullam ac congue tortor. Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Sed sed gravida mi, ac semper libero. Quisque id tincidunt nisl, sit amet
+                ornare felis. Vivamus et purus in lorem luctus consectetur ac vel felis. Etiam lacinia accumsan mattis.
+                Sed neque metus, efficitur a nulla a, venenatis porta velit. Nullam suscipit lobortis luctus. Donec
+            </p>
+            <br>
+            <div id="balises">
+                <h2>Balises</h2>
+            </div>
+            <table id="tableau">
+                <caption>Définition</caption>
+                <thead>
+                    <tr>
+                        <th class="balise">Balises</th>
+                        <th class="language">Language</th>
+                        <th class="description">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% dump definition %}
+                    {% if definition is not empty %}
+                        {% for definition in definition %}
+                            <tr>
+                                <td class="balise"><a href="{{ path('definition_show', {id: definition.id}) }}">{{ definition.nom }} </a></td>
+                                <td class="language">{{ definition.language }} </td>
+                                <td><a href="{{ path('definition_edit' , {id: definition.id}) }}">Modifier</a></td>
+                                {% if definition.content is not empty and definition.content is defined %}
+                                    <td class="description">{{ definition.content }}</td>
+                                {% else %}
+                                    <a href="{{ path('definition_show', {id: definition.id}) }}"> Voir plus </a>
+                                    <td class="description">{{ definition.content }}</td>
+                                {% endif %}
+                            </tr>
+                        {% endfor %}
+                    {% else %}
+                        <p>Pas de balise</p>
+                    {% endif %}
+                    <br>
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
+            <br>
+            <button id="button-insertion">
+                <a href="{{ path('definition_new') }}" id="lien-insertion"> Insérer une nouvelle balise</a>
+            </button>
+            <br>
+            <br>
+            <div id="attribut">
+                <h2>Attributs</h2>
+            </div>
+            <br>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut est efficitur, sollicitudin sapien in,
+                maximus arcu. Aliquam tristique arcu placerat metus iaculis bibendum. Nulla tellus nulla, semper nec
+                dictum tincidunt, mollis commodo mauris. Nullam ac congue tortor. Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Sed sed gravida mi, ac semper libero. Quisque id tincidunt nisl, sit amet
+                ornare felis. Vivamus et purus in lorem luctus consectetur ac vel felis. Etiam lacinia accumsan mattis.
+                Sed neque metus, efficitur a nulla a, venenatis porta velit. Nullam suscipit lobortis luctus. Donec
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut est efficitur, sollicitudin sapien in,
+                maximus arcu. Aliquam tristique arcu placerat metus iaculis bibendum. Nulla tellus nulla, semper nec
+                dictum tincidunt, mollis commodo mauris. Nullam ac congue tortor. Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Sed sed gravida mi, ac semper libero. Quisque id tincidunt nisl, sit amet
+                ornare felis. Vivamus et purus in lorem luctus consectetur ac vel felis. Etiam lacinia accumsan mattis.
+                Sed neque metus, efficitur a nulla a, venenatis porta velit. Nullam suscipit lobortis luctus. Donec
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut est efficitur, sollicitudin sapien in,
+                maximus arcu. Aliquam tristique arcu placerat metus iaculis bibendum. Nulla tellus nulla, semper nec
+                dictum tincidunt, mollis commodo mauris. Nullam ac congue tortor. Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Sed sed gravida mi, ac semper libero. Quisque id tincidunt nisl, sit amet
+                ornare felis. Vivamus et purus in lorem luctus consectetur ac vel felis. Etiam lacinia accumsan mattis.
+                Sed neque metus, efficitur a nulla a, venenatis porta velit. Nullam suscipit lobortis luctus. Donec
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut est efficitur, sollicitudin sapien in,
+                maximus arcu. Aliquam tristique arcu placerat metus iaculis bibendum. Nulla tellus nulla, semper nec
+                dictum tincidunt, mollis commodo mauris. Nullam ac congue tortor. Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Sed sed gravida mi, ac semper libero. Quisque id tincidunt nisl, sit amet
+                ornare felis. Vivamus et purus in lorem luctus consectetur ac vel felis. Etiam lacinia accumsan mattis.
+                Sed neque metus, efficitur a nulla a, venenatis porta velit. Nullam suscipit lobortis luctus. Donec
+
+            <div id="pseudo-classe">
+                <h2>Pseudo-classe</h2>
+            </div>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut est efficitur, sollicitudin sapien in,
+                maximus arcu. Aliquam tristique arcu placerat metus iaculis bibendum. Nulla tellus nulla, semper nec dictum
+                tincidunt, mollis commodo mauris. Nullam ac congue tortor. Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Sed sed gravida mi, ac semper libero. Quisque id tincidunt nisl, sit amet ornare felis. Vivamus et purus
+                in lorem luctus consectetur ac vel felis. Etiam lacinia accumsan mattis. Sed neque metus, efficitur a nulla a,
+                venenatis porta velit. Nullam suscipit lobortis luctus. Donec consectetur ligula ac mi ornare maximus. Morbi
+                arcu nunc, hendrerit tempus dui nec, porttitor fringilla neque. Fusce in augue at sapien fermentum fringilla
+                vel a elit.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut est efficitur, sollicitudin sapien in,
+                maximus arcu. Aliquam tristique arcu placerat metus iaculis bibendum. Nulla tellus nulla, semper nec
+                dictum tincidunt, mollis commodo mauris. Nullam ac congue tortor. Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Sed sed gravida mi, ac semper libero. Quisque id tincidunt nisl, sit amet
+                ornare felis. Vivamus et purus in lorem luctus consectetur ac vel felis. Etiam lacinia accumsan mattis.
+                Sed neque metus, efficitur a nulla a, venenatis porta velit. Nullam suscipit lobortis luctus. Donec
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut est efficitur, sollicitudin sapien in,
+                maximus arcu. Aliquam tristique arcu placerat metus iaculis bibendum. Nulla tellus nulla, semper nec
+                dictum tincidunt, mollis commodo mauris. Nullam ac congue tortor. Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Sed sed gravida mi, ac semper libero. Quisque id tincidunt nisl, sit amet
+                ornare felis. Vivamus et purus in lorem luctus consectetur ac vel felis. Etiam lacinia accumsan mattis.
+                Sed neque metus, efficitur a nulla a, venenatis porta velit. Nullam suscipit lobortis luctus. Donec
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut est efficitur, sollicitudin sapien in,
+                maximus arcu. Aliquam tristique arcu placerat metus iaculis bibendum. Nulla tellus nulla, semper nec
+                dictum tincidunt, mollis commodo mauris. Nullam ac congue tortor. Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Sed sed gravida mi, ac semper libero. Quisque id tincidunt nisl, sit amet
+                ornare felis. Vivamus et purus in lorem luctus consectetur ac vel felis. Etiam lacinia accumsan mattis.
+                Sed neque metus, efficitur a nulla a, venenatis porta velit. Nullam suscipit lobortis luctus. Donec
+            </p>
+        </div>
+{% endblock %}

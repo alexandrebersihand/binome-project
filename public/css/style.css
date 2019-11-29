@@ -1,0 +1,256 @@
+html{
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body{
+  margin: 0;
+  background-color: beige;
+
+}
+
+/* Design de la navbar*/
+nav{
+  display: flex;
+  background-color: black;
+}
+
+li.bouton {
+  text-decoration: none;
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+ul.nav{
+  display: flex;
+  height: 60px;
+  width: 100%;
+  list-style-type: none;
+  font-family: Verdana, Geneva, Tahoma, sans-semarginrif;
+  margin-block-start: -1px;
+  padding:0;
+}
+ul.nav2{
+  display: flex;
+  list-style: none;
+  align-items: flex-end;
+}
+
+.img{
+  height: 60px;
+}
+
+.dropdown{
+  display: block;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  align-self: flex-end;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  display:block;
+  width: 100px;
+  text-align: center;
+  padding: 21px 20px;
+  position: relative;
+}
+
+.dropdown-content-principale, .dropdown-content-tablehtml, .dropdown-content-tablecss {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 110px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+
+}
+
+.dropdown-content-tablehtml{
+  width: 130px;
+  left: 110px;
+  top:0;
+}
+
+.dropdown-content-tablecss{
+  top:38px;
+  left: 110px;
+}
+
+.dropdown:hover .dropdown-content-principale, .tablecss:hover .dropdown-content-tablecss, .tablehtml:hover .dropdown-content-tablehtml {
+  display: block;
+}
+
+.dropbtn:hover, .bouton:hover{
+  background-color: green;
+}
+
+.dropdown-content-principale a {
+  float: none;
+  color: black;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+a.tablehtml{
+  padding:0;
+}
+
+.dropdown-content-principale a:hover {
+  background-color: #ddd;
+}
+.bouton a{
+  text-decoration: none;
+  width: 100px;
+  color: white;
+  padding: 21px 20px;
+  display: block;
+  text-align: center;
+
+}
+
+/* Design du sidebar Page3 */
+
+.side{
+  width:60px;
+  height: 60px;
+  background-color: black;
+  top:40%;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:0;
+}
+
+.side a{
+  font-size: large;
+  text-decoration: none;
+  color: white;
+}
+
+.sidebar{
+  position: fixed;
+  top:40%;
+  right:0;
+}
+
+.sidebar ul{
+  list-style-type: none;
+}
+
+.sidedown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 110px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  right:60px;
+}
+
+.sidedown, .sidedownn{
+  display:none;
+}
+
+.sidedown-content a{
+  float: none;
+  color: black;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.side:hover{
+  background-color: green;
+}
+
+.side:hover .sidedown-content, .shtml:hover .sidedown, .scss:hover .sidedownn{
+  display:block;
+}
+
+.shtml:hover, .scss:hover{
+  background-color: rgb(221, 221, 221);
+}
+
+.sidedown:hover, .sidedownn a:hover{
+  background-color: rgb(160, 158, 158);
+}
+
+/* Design du footer */
+
+
+  *{
+    margin: 0;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  .page-wrap {
+    min-height: 100%;
+    padding:  10px;
+    /* equal to footer height */
+    margin-bottom: -142px; 
+  }
+  .page-wrap:after {
+    content: "";
+    display: block;
+  }
+  .site-footer, .page-wrap:after {
+    height: 142px; 
+  }
+  .site-footer {
+    background: #000000;
+    color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .site-footer p{
+      text-align: end;
+      padding-right: 20px;
+  }
+
+.contact{
+    height: 85%;
+    width: 100%;
+    position: relative;
+}
+
+.contact a{
+    text-decoration: none;
+    text-align: center;
+    left:45%;
+    bottom:60px;
+    height: 35px;
+    width: 120px;
+    padding: 10px;
+    color:white;
+    position: absolute;
+  }
+
+ .site-footer a:hover{
+      background-color: green;
+  }
+
+h1 {
+  text-align: center  ;
+}

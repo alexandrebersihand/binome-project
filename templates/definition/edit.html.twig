@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Definition{% endblock %}
+
+{% block body %}
+    <h1>Editer Definition</h1>
+
+    {{ include('definition/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('definition_index') }}">Retour vers l'index</a>
+
+    {{ include('definition/_delete_form.html.twig') }}
+{% endblock %}

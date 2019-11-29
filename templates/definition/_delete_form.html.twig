@@ -1,0 +1,5 @@
+<form method="post" action="{{ path('definition_delete', {'id': definition.id}) }}" onsubmit="return confirm('Etes-vous certain de vouloir supprimer cette définition');">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ definition.id) }}">
+    <button id="button-insertion">Delete</button>
+</form>

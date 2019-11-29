@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Definition index{% endblock %}
+
+{% block body %}
+    <h1>Liste des définitions</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Language</th>
+                <th>Content</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for definition in definitions %}
+            <tr>
+                <td>{{ definition.nom }}</td>
+                <td>{{ definition.language }}</td>
+                <td>{{ definition.content }}</td>
+                <td>
+                    <a href="{{ path('definition_show', {'id': definition.id}) }}">Voir</a>
+                    <a href="{{ path('definition_edit', {'id': definition.id}) }}">Editer</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">Pas de définition trouvées</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <button id="button-insertion">
+        <a href="{{ path('definition_new') }}">Créer nouvelle définition</a>
+    </button>
+{% endblock %}

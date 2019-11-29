@@ -1,0 +1,37 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+#new_article {
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    border-right: solid sienna 2px;
+    border-bottom: solid sienna 2px;
+    border-left: solid sienna 2px;
+    border-top: solid sienna 2px;
+    width : 500px;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+ div {
+
+ }
+input#definition_Nom, input#definition_Language, textarea#definition_Content {
+    margin-top: 5px;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+textarea#definition_Content {
+    margin-bottom: 5px;
+    width: 95%;
+    height: 170px;
+}

@@ -1,0 +1,31 @@
+#form-login {
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    border-right: solid sienna 2px;
+    border-bottom: solid sienna 2px;
+    border-left: solid sienna 2px;
+    border-top: solid sienna 2px;
+    width : 500px;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+input#definition_nom, input#definition_language, input#definition_content, button.btn{
+    margin: 10px;
+}
+
+textarea#definition_content {
+    width: 95%;
+    margin: 10px;
+    border-radius:5px
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+}

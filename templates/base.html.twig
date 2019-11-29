@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" type="text/css" href="{{ asset ('css/style.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('css/style-article.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('css/style-listing.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('css/style-formulaire.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('css/style-tableau.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('css/style-new.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('css/style-form-login.css') }}">
+    {% endblock %}
+</head>
+
+<header>
+    <nav>
+        <ul class="nav">
+            <li>
+                <a href="{{ path ('home') }}"><img class="img" src="{{ asset('img/icon-maison.jpg') }}" alt="Acceuil" title="Acceuil"></a>
+            </li>
+            <li class="bouton">
+                <a href="{{ path ('page1') }}">HTML</a>
+            </li>
+            <li class="bouton">
+                <a href="{{ path ('page2') }}">CSS </a>
+            </li>
+            <li class="dropdown">
+                <a class="dropbtn" href="{{ path ('page3') }}">Définitions</a>
+                <div class="dropdown-content-principale">
+                    <div class="tablehtml">
+                        <a href="{{ path ('page3') }}?#debut-html">HTML
+                        </a>
+                        <div class="dropdown-content-tablehtml">
+                            <a href="{{ path ('page3') }}?#balises">Balises HTML</a>
+                        </div>
+                    </div>
+                    <div class="tablecss">
+                        <a href="{{ path ('page3') }}?#debut-css">CSS</a>
+                        <div class="dropdown-content-tablecss">
+                            <a href="{{ path ('page3') }}?#attribut">Attribut</a>
+                            <a href="{{ path ('page3') }}?#pseudo-classe">Pseudo classe</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="nav2">
+            <li class="bouton">
+                <a href="{{ path('app_register') }}">Inscription</a>
+            </li>
+            <li class="bouton">
+                <a href="{{ path('app_login')}}">Connexion</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+{% block body %}{% endblock %}
+<body>
+<footer class="site-footer">
+    <div class="contact">
+        <a href="{{ path ('form_contact') }}" onclick="">Nous contacter</a>
+
+    </div>
+    <p id="copyright">
+        @copyright Alex & Bruno
+    </p>
+</footer>
+</body>
+</html>

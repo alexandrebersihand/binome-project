@@ -1,0 +1,16 @@
+article .img{
+    float: right;
+    height: 50%;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.article{
+    width: 100%;
+    height: 80%;
+    padding-left: 10px;
+}
+.texte-description{
+    text-align: justify;
+    margin-right: 30px;
+}
